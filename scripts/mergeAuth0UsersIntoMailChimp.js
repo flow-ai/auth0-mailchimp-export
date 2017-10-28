@@ -10,14 +10,22 @@ var mergeAuth0UsersIntoMailChimp = function (config, mailchimp) {
     mailchimp.lists_batch_subscribe({
       id: listId,
       batch: users.map(function (user) {
+        var firstName = user.given_name || '';
+        var lastName = user.family_name || '';
+
+        if(user.user_metadata) {
+          firstName = user.user_metadata.firstName;
+          lastName = user.user_metadata.firstName;
+        }
+        
         return {
           email: {
             email: user.email
           },
           email_type: 'text',
           merge_vars: {
-            'FNAME': user.given_name || '',
-            'LNAME': user.family_name || ''
+            'FNAME': firstName,
+            'LNAME': lastName
           }
         };
       }),
