@@ -15,9 +15,9 @@ var mergeAuth0UsersIntoMailChimp = function (config, mailchimp) {
 
         if(user.user_metadata) {
           firstName = user.user_metadata.firstName;
-          lastName = user.user_metadata.firstName;
+          lastName = user.user_metadata.lastName;
         }
-        
+
         return {
           email: {
             email: user.email
