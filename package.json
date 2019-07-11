@@ -24,8 +24,8 @@
     "async": "^2.1.2",
     "auth0": "^2.1.0",
     "express": "4.12.4",
-    "lodash": "^4.8.2",
-    "lru-memoizer": "^1.5.0",
+    "lodash": "^4.17.12",
+    "lru-memoizer": "^1.11.2",
     "mailchimp": "^1.2.0",
     "q": "^1.4.1",
     "ramda": "^0.18.0",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.4",
-    "lodash": "3.9.3",
+    "lodash": "4.17.12",
     "lru-cache": "^4.0.1",
     "request-promise": "^2.0.0",
     "webpack": "^1.12.9"
